@@ -10,7 +10,7 @@ const routes = express.Router()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect('mongodb+srv://pablo:pablo@cluster0.otmrw.mongodb.net/melodesigner?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-pwdxr.mongodb.net/melodesigner?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 
@@ -31,7 +31,8 @@ routes.post('/send', async function(req, res){
         })
 
 
-    return res.json(user)
+return res.json({status: 'success'})
+
 })
 
 routes.get('/index', async function(req, res){
